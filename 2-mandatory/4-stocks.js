@@ -1,4 +1,6 @@
 /*
+    THESE EXERCISES ARE QUITE HARD. DON'T WORRY IF YOU CAN'T COMPLETE THEM ALL - JUST DO YOUR BEST, AND COME WITH QUESTIONS :)
+
     Imagine we a working for a finance company. Below we have:
         - an array of stock tickers
         - an array of arrays containing the closing price for each stock in each of the last 5 days.
