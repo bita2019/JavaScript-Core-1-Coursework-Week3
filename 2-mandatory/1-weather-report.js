@@ -11,12 +11,6 @@
         - Hint: you can call the temperatureService function from your function
 */
 
-let usersCities = [
-    "London",
-    "Paris",
-    "São Paulo"
-]
-
 function getTemperatureReport(cities) {
     // TODO
 }
@@ -39,9 +33,31 @@ function temperatureService(city) {
 }
 
 test("should return a temperature report for the user's cities", () => {
+    let usersCities = [
+        "London",
+        "Paris",
+        "São Paulo"
+    ]
+
     expect(getTemperatureReport(usersCities)).toEqual([
         "The temperature in London is 10 degrees",
         "The temperature in Paris is 12 degrees",
         "The temperature in São Paulo is 23 degrees"
     ]);
+});
+
+test("should return a temperature report for the user's cities (alternate input)", () => {
+    let usersCities = [
+        "Barcelona",
+        "Dubai"
+    ]
+
+    expect(getTemperatureReport(usersCities)).toEqual([
+        "The temperature in Barcelona is 17 degrees",
+        "The temperature in Dubai is 27 degrees"
+    ]);
+});
+
+test("should return an empty array if the user hasn't selected any cities", () => {
+    expect(getTemperatureReport([])).toEqual([]);
 });

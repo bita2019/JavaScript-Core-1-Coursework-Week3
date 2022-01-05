@@ -45,7 +45,7 @@ function getAveragePrices(closingPricesForAllStocks) {
             For example, the first element of the resulting array should contain Apple’s (aapl) price change for the last 5 days.
             In this example it would be:
                 (Apple's price on the 5th day) - (Apple's price on the 1st day) = 172.99 - 179.19 = -6.2
-    The average value should be rounded to 2 decimal places, and should be a number (not a string)
+    The price change value should be rounded to 2 decimal places, and should be a number (not a string)
 */
 function getPriceChanges(closingPricesForAllStocks) {
     // TODO

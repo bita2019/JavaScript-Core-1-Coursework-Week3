@@ -9,16 +9,29 @@
     The fifth number in the sequence is 3, because 1 + 2 = 3. (the last 2 numbers in the sequence were 1 and 2)
     And so on... If we go a bit further the sequence looks like 0, 1, 1, 2, 3, 5, 8, 13,....
 
-    Can you implement a function that will generate the first 10 numbers in this sequence (starting with 0 and 1)?
+    Can you implement a function that will generate the first n numbers in this sequence (starting with 0 and 1)?
+        - the input n will be passed in to the function as an argument, and will be a number greater than 2
 */
 
-function generateFibonacciSequence() {
+function generateFibonacciSequence(n) {
     // TODO
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 test("should return the first 10 numbers in the Fibonacci Sequence", () => {
-    expect(generateFibonacciSequence()).toEqual(
+    expect(generateFibonacciSequence(10)).toEqual(
         [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    );
+});
+
+test("should return the first 5 numbers in the Fibonacci Sequence", () => {
+    expect(generateFibonacciSequence(5)).toEqual(
+        [0, 1, 1, 2, 3]
+    );
+});
+
+test("should return the first 15 numbers in the Fibonacci Sequence", () => {
+    expect(generateFibonacciSequence(15)).toEqual(
+        [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
     );
 });

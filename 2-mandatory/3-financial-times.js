@@ -1,22 +1,6 @@
 /*
     Imagine you are working on the Financial Times web site! They have a list of article titles stored in an array.
-*/
 
-/* ======= List of Articles - DO NOT MODIFY ===== */
-const ARTICLE_TITLES = [
-    "Streaming wars drive media groups to spend more than $100bn on new content",
-    "Amazon Prime Video India country head: streaming is driving a TV revolution",
-    "Aerospace chiefs prepare for bumpy ride in recovery of long-haul flights",
-    "British companies look to muscle in on US retail investing boom",
-    "Libor to take firm step towards oblivion on New Year's Day",
-    "Audit profession unattractive to new recruits, says PwC boss",
-    "Chinese social media users blast Elon Musk over near miss in space",
-    "Companies raise over $12tn in 'blockbuster' year for global capital markets",
-    "The three questions that dominate investment",
-    "Brussels urges Chile's incoming president to endorse EU trade deal",
-];
-
-/*
     The home page of the web site has a headline section, which only has space for article titles which are 65 characters or less.
     Implement the function below, which will return a new array containing only article titles which will fit.
 */
@@ -52,6 +36,20 @@ function averageNumberOfCharacters(allArticleTitles) {
 
 
 
+/* ======= List of Articles - DO NOT MODIFY ===== */
+const ARTICLE_TITLES = [
+    "Streaming wars drive media groups to spend more than $100bn on new content",
+    "Amazon Prime Video India country head: streaming is driving a TV revolution",
+    "Aerospace chiefs prepare for bumpy ride in recovery of long-haul flights",
+    "British companies look to muscle in on US retail investing boom",
+    "Libor to take firm step towards oblivion on New Year's Day",
+    "Audit profession unattractive to new recruits, says PwC boss",
+    "Chinese social media users blast Elon Musk over near miss in space",
+    "Companies raise over $12tn in 'blockbuster' year for global capital markets",
+    "The three questions that dominate investment",
+    "Brussels urges Chile's incoming president to endorse EU trade deal",
+];
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 test("should only return potential headlines", () => {
@@ -61,6 +59,10 @@ test("should only return potential headlines", () => {
         "Audit profession unattractive to new recruits, says PwC boss",
         "The three questions that dominate investment"
     ]));
+});
+
+test("should return an empty array for empty input", () => {
+    expect(potentialHeadlines([])).toEqual([]);
 });
 
 test("should return the title with the fewest words", () => {
